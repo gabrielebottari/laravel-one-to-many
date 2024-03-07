@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name','slug'];
+
+    public function getRouteKeyName()
+    {
+        return 'slug'; // Usa 'slug' per il Route Model Binding
+    }
 
     public function projects()
     {

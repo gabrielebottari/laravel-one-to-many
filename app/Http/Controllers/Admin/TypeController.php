@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreTypeRequest;
 use App\Http\Requests\UpdateTypeRequest;
 
+use Illuminate\Support\Str;
+
+
 use App\Models\Type;
 
 class TypeController extends Controller
@@ -37,6 +40,7 @@ class TypeController extends Controller
     public function store(StoreTypeRequest $request)
     {
         $validated = $request->validated();
+        $validated['slug'] = Str::slug($validated['name']);
     
         Type::create($validated);
     
@@ -67,7 +71,7 @@ class TypeController extends Controller
     
         $type->update($validated);
     
-        return redirect()->route('admin.types.index')->with('success', 'Tipo aggiornato con successo.');
+        return redirect()->route('admin.types.index',['type'=>$type->slug])->with('success', 'Tipo aggiornato con successo.');
     }
 
     /**
