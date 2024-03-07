@@ -32,6 +32,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('admin.projects.create') }}">Crea un Nuovo Progetto <i class="fa-solid fa-plus"></i></a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin.types.index') }}">Tecnologie </a>
+                                </li>
                             @else
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">Login <i class="fa-solid fa-right-to-bracket"></i></a>

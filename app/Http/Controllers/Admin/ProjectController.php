@@ -33,9 +33,10 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $project = new Project(); // Inizializza una nuova istanza vuota o predefinita
-        // Imposta eventuali valori predefiniti qui
-        return view('admin.projects.create', compact('project'));
+        $project = new Project();
+        $types = Type::all();
+
+        return view('admin.projects.create', compact('project', 'types'));
     }
 
     /**

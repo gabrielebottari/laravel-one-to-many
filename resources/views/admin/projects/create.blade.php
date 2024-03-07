@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Tutti i post')
+@section('page-title', 'Nuovo Progetto')
 
 @section('main-content')
 <div class="container">
@@ -25,12 +25,15 @@
             <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" required>
         </div>
 
-        <select name="type_id">
-            <option value="">Nessuna Tipologia</option>
-            @foreach ($types as $type)
-                <option value="{{ $type->id }}" {{ (old('type_id', $project->type_id ?? '') == $type->id) ? 'selected' : '' }}>{{ $type->name }}</option>
-            @endforeach
-        </select>
+        <div class="mb-3">
+            <label for="type_id" class="form-label">Tecnologia</label>
+            <select name="type_id" class="form-select">
+                <option value="">Select Technology</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}" {{ (old('type_id', $project->type_id ?? '') == $type->id) ? 'selected' : '' }}>{{ $type->name }}</option>
+                @endforeach
+            </select> 
+        </div>
 
         <div class="mb-3">
             <label for="image" class="form-label">URL dell'immagine</label>

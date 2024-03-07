@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 class Project extends Model
 {
     
-    protected $fillable = ['title', 'slug', 'image', 'description', 'date'];
+    protected $fillable = ['title', 'slug', 'image', 'description', 'date','type_id'];
 
     /**
      * The "booting" method of the model.

@@ -31,6 +31,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.projects.create') }}">Nuovo Progetto <i class="fa-solid fa-plus"></i></a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.types.index') }}">Tecnologie </a>
+                            </li>
                         </ul>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
