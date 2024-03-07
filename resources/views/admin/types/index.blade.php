@@ -5,8 +5,8 @@
 @section('main-content')
 <div class="container mt-4">
     <div class="row">
-        <div class="col">
-            <h2 class="text-primary">Tipologie di Progetto</h2>
+        <div class="col-4">
+            <h2 class="text-primary">Tecnologie</h2>
 
             <a href="{{ route('admin.types.create') }}" class="btn btn-primary mb-3">Aggiungi Tecnologie <i class="fa-solid fa-plus"></i></a>
 
@@ -15,7 +15,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Nome</th>
-                        <th>Azioni</th>
+                        <th class="text-center">Azioni</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,8 +23,8 @@
                         <tr>
                             <td>{{ $type->id }}</td>
                             <td>{{ $type->name }}</td>
-                            <td>
-                                <a href="{{ route('admin.types.edit', $type->id) }}" class="btn btn-sm btn-primary">Modifica</a>
+                            <td class="text-center">
+                                <a href="{{ route('admin.types.edit', $type->id) }}" class="btn btn-sm btn-warning">Modifica</a>
                                 <form action="{{ route('admin.types.destroy', $type->id) }}" method="POST" style="display:inline-block;">
                                     @csrf
                                     @method('DELETE')
