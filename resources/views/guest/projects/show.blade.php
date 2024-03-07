@@ -9,12 +9,14 @@
         <div class="card mb-3 w-50 h-100">
             <img src="{{ $project->image }}" class="card-img-top h-75" alt="{{ $project->title }}">
             <h5 class="card-title p-2">{{ $project->title }}</h5>
+            @if ($project->type)
+                <p>Tipologia: {{ $project->type->name }}</p>
+            @endif
             <div class="card-body">
                 <p class="card-text">{{ $project->description }}</p>
                 <p class="card-text"><small class="text-muted">{{ $project->date }}</small></p>
             </div>
         </div>
-
 
     </div>
 

@@ -29,4 +29,9 @@ class Project extends Model
     {
         return 'slug'; // Usa 'slug' per il Route Model Binding
     }
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }

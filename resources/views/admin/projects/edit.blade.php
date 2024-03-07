@@ -26,6 +26,13 @@
             <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $project->title) }}" required>
         </div>
 
+        <select name="type_id">
+            <option value="">Nessuna Tipologia</option>
+            @foreach ($types as $type)
+                <option value="{{ $type->id }}" {{ (old('type_id', $project->type_id ?? '') == $type->id) ? 'selected' : '' }}>{{ $type->name }}</option>
+            @endforeach
+        </select>
+
         <div class="mb-3">
             <label for="image" class="form-label">URL dell'immagine</label>
             <input type="text" class="form-control" id="image" name="image" value="{{ old('image', $project->image) }}">
