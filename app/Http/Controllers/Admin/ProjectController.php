@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 
 // Models
 use App\Models\Project;
+use App\Models\Type;
 
 
 class ProjectController extends Controller
@@ -68,7 +69,9 @@ class ProjectController extends Controller
     public function edit($slug)
     {
         $project = Project::where('slug', $slug)->firstOrFail();
-        return view('admin.projects.edit', compact('project'));
+        $types = Type::all();
+
+        return view('admin.projects.edit', compact('project', 'types'));
     }
   
     public function update(UpdateProjectRequest $request, Project $project)

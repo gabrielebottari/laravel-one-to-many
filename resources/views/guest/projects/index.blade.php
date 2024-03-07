@@ -15,7 +15,7 @@
                             <img src="{{ $project->image }}" class="card-img-top" alt="{{ $project->title }}">
                             <h5 class="card-title p-2">{{ $project->title }}</h5>
                             @if ($project->type)
-                                <p>Tipologia: {{ $project->type->name }}</p>
+                                <p class="px-2">Technology: {{ $project->type->name }}</p>
                             @endif
                             <div class="card-body">                             
                                 <p class="card-text">{{ $project->description }}</p>

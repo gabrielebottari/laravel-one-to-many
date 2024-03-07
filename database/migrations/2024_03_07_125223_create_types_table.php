@@ -23,6 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::disableForeignKeyConstraints(); // Disabilita i vincoli di chiave esterna
         Schema::dropIfExists('types');
+        Schema::enableForeignKeyConstraints(); // Riabilita i vincoli di chiave esterna
     }
 };
