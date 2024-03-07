@@ -53,7 +53,7 @@
             </a>
 
             <button type="submit" class="btn btn-primary">
-                Register
+                Register <i class="fa-regular fa-id-card"></i>
             </button>
         </div>
     </form>

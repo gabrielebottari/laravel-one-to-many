@@ -49,7 +49,7 @@
             @endif
 
             <button type="submit" class="btn btn-primary">
-                Log in
+                Log in <i class="fa-solid fa-right-to-bracket"></i>
             </button>
         </div>
     </form>

@@ -4,7 +4,7 @@
 
 @section('main-content')
 <div class="container">
-    <h2>Create New Project</h2>
+    <h2 class="text-primary">Create New Project</h2>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -50,7 +50,7 @@
             <input type="date" class="form-control" id="date" name="date" value="{{ old('date') }}" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Create <i class="fa-solid fa-plus"></i></button>
     </form>
 </div>
 @endsection

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Tutti i post')
+@section('page-title', 'Modifica Progetto')
 
 @section('main-content')
 <div class="container">
@@ -51,7 +51,7 @@
             <input type="date" class="form-control" id="date" name="date" value="{{ old('date', $project->date) }}" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Aggiorna</button>
+        <button type="submit" class="btn btn-primary">Aggiorna <i class="fa-solid fa-pen"></i></button>
     </form>
 </div>
 @endsection

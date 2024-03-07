@@ -1,6 +1,6 @@
 @extends('layouts.guest')
 
-@section('page-title', 'Tutti i post')
+@section('page-title', 'Tutti i Progetti')
 
 @section('main-content')
     
@@ -17,7 +17,7 @@
                             @if ($project->type)
                                 <p class="px-2">Technology: {{ $project->type->name }}</p>
                             @endif
-                            <div class="card-body">                             
+                            <div class="card-body m-2">                             
                                 <p class="card-text">{{ $project->description }}</p>
                                 <p class="card-text"><small class="text-muted">{{ $project->date }}</small></p>
                             </div>

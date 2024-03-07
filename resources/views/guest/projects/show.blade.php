@@ -1,6 +1,6 @@
 @extends('layouts.guest')
 
-@section('page-title', 'Tutti i post')
+@section('page-title', $project->title)
 
 @section('main-content')
 <div class="container bg-primary-subtle p-5">

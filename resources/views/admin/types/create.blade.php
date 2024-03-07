@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-title', 'Aggiungi Tecnologia')
+
 @section('main-content')
 <div class="container">
     <h2>Nuova Teconologia</h2>
@@ -22,7 +24,7 @@
             <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Salva</button>
+        <button type="submit" class="btn btn-primary">Salva <i class="fa-solid fa-floppy-disk"></i></button>
     </form>
 </div>
 @endsection

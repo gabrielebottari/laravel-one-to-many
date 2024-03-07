@@ -5,7 +5,7 @@
 @section('main-content')
 <div class="container mt-4">
     <div class="row">
-        <div class="col-4">
+        <div class="col-6">
             <h2 class="text-primary">Tecnologie</h2>
 
             <a href="{{ route('admin.types.create') }}" class="btn btn-primary mb-3">Aggiungi Tecnologie <i class="fa-solid fa-plus"></i></a>
@@ -24,11 +24,12 @@
                             <td>{{ $type->id }}</td>
                             <td>{{ $type->name }}</td>
                             <td class="text-center">
-                                <a href="{{ route('admin.types.edit', $type->id) }}" class="btn btn-sm btn-warning">Modifica</a>
+                                <a href="{{ route('admin.types.show', $type->id) }}" class="btn btn-sm btn-primary me-2">Info <i class="fa-solid fa-circle-info"></i></a>
+                                <a href="{{ route('admin.types.edit', $type->id) }}" class="btn btn-sm btn-warning me-2">Modifica <i class="fa-solid fa-pen"></i></a>
                                 <form action="{{ route('admin.types.destroy', $type->id) }}" method="POST" style="display:inline-block;">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Sei sicuro di voler eliminare questa tipologia?');">Elimina</button>
+                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Sei sicuro di voler eliminare questa tipologia?');">Elimina <i class="fa-solid fa-trash-can"></i></button>
                                 </form>
                             </td>
                         </tr>

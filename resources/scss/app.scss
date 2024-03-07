@@ -8,6 +8,10 @@ main {
     height: 600px;
     border: none;
 
+    img {
+        max-height: 300px;
+    }
+
     .card-body{
 
             overflow-y: auto; // Abilita la barra di scorrimento verticale se necessario

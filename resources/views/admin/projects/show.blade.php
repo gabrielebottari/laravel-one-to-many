@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Tutti i post')
+@section('page-title', $project->title)
 
 @section('main-content')
 <div class="container bg-primary-subtle p-5">
@@ -8,7 +8,7 @@
 
         <div class="card mb-3 w-50 h-100">
             <img src="{{ $project->image }}" class="card-img-top" alt="{{ $project->title }}">
-            <h5 class="card-title">{{ $project->title }}</h5>
+            <h5 class="card-title p-2">{{ $project->title }}</h5>
             @if ($project->type)
                 <p class="px-2">Technology: {{ $project->type->name }}</p>
             @endif

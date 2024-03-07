@@ -16,7 +16,7 @@
         <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary-subtle">
                 <div class="container">
-                    <a class="navbar-brand" href="/">Boolfolio</a>
+                    <a class="navbar-brand" href="/"><img src="{{ Vite::asset('resources/img/BOOLFOLIO.png') }}" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -32,7 +32,7 @@
                                 <a class="nav-link" href="{{ route('admin.projects.create') }}">Nuovo Progetto <i class="fa-solid fa-plus"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.types.index') }}">Tecnologie </a>
+                                <a class="nav-link" href="{{ route('admin.types.index') }}">Tecnologie <i class="fa-solid fa-microchip"></i></a>
                             </li>
                         </ul>
                         <form method="POST" action="{{ route('logout') }}">

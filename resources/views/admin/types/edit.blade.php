@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-title', 'Modifica Tecnologia')
+
 @section('main-content')
 <div class="container">
     <h2>Modifica Tipo</h2>
@@ -23,7 +25,7 @@
             <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $type->name) }}" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Aggiorna</button>
+        <button type="submit" class="btn btn-primary">Aggiorna <i class="fa-solid fa-pen"></i></button>
     </form>
 </div>
 @endsection
