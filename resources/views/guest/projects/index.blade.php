@@ -5,7 +5,7 @@
 @section('main-content')
     
     <div class="container bg-primary-subtle">
-        <h1 class="p-3 text-center">Progetti</h1>
+        <h1 class="p-3 text-center text-primary">Progetti</h1>
         <a href="{{ route('login') }}" class="btn btn-primary mb-3 ms-4">Accedi Per Inserire un nuovo Progetto <i class="fa-solid fa-right-to-bracket"></i></a>
         <div class="row p-3">
             @foreach ($projects as $project)
